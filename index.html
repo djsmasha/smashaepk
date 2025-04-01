@@ -87,24 +87,33 @@
             z-index: 2;
         }
         
-        .logo-img {
-           max-width: 1000px; /* Change this value */
-    max-height: 1500px; /* Change this value */
-    margin-bottom: 1000px;
-    /* Add these for better control */
-    width: auto; /* Maintains aspect ratio */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Ensures proper spacing */
-    margin-bottom: -700px; /* Centers horizontally */
-    margin-top: -500px;
-    margin-left: 200px;
-        }
-        
-        @media (max-width: 768px) {
+        /* Desktop styling (matches your original) */
+.logo-img {
+    /* Desktop sizing (matches your preference) */
+    max-width: 1000px;
+    max-height: 1500px;
+    width: auto;
+    height: auto;
+    display: block;
+    
+    /* REPLACE negative margins with proper positioning */
+    margin: 0 auto; /* Centers horizontally */
+    position: relative; /* Allows adjustments */
+    top: 0; /* Reset any offscreen positioning */
+}
+
+@media (max-width: 768px) {
     .logo-img {
-        max-width: 200px; /* Fixed max size for mobile */
-        max-height: 100px; /* Prevents excessive height */
+        /* Mobile-friendly sizing */
+        max-width: 200px;
+        max-height: 100px;
+        
+        /* CRITICAL: Reset all desktop positioning */
+        margin: 20px auto; /* Adds safe spacing */
+        position: static; /* Prevents overlap */
     }
+}
+
         .tagline {
             font-size: 1.3rem;
             opacity: 0.9;
@@ -280,7 +289,7 @@
     <header>
         <div class="container header-content">
             <!-- Replace with your local logo file -->
-            <img src="./images/logo.png" alt="DJ SMASHA Logo" class="logo-img">
+            <img src="./images/logo2.png" alt="DJ SMASHA Logo" class="logo-img">
             <!-- <div class="tagline">Producer & Open Format DJ</div> -->
         </div>
     </header>
